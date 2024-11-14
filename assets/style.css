@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #006400; /* Warna latar belakang */
+    background-image: url('images/background.png'); /* Ganti dengan path gambar kamu */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Silkscreen', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.artist-name {
+    font-size: 24px;
+}
+
+.parental-advisory {
+    border: 2px solid white;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.album-cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+}
+
+.album-title {
+    font-size: 72px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.buy-button {
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 100vw;
+    transition: left 0.5s ease;
+}
+
+.page.active {
+    left: 0;
+}
+
+.page.hidden {
+    left: 100vw;
+}
+
+.next-page {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 72px;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.next-page:hover {
+    transform: scale(1.2);
+}
+
+#page-2 {
+    background-image: url('images/backgroundorange.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.previous-page { 
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 72px;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.previous-page:hover {
+    transform: scale(1.2);
+}
+
+.previous-page:active {
+    transform: scale(1.1); /* Sedikit mengecil ketika diklik */
+}
